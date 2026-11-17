@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MD Asaduzzaman | Web Designer &amp; SEO Specialist</title>
+<meta name="description" content="Web Designer and SEO Specialist with 7+ years of experience and 300+ WordPress and Shopify projects delivered.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+:root{
+  --bg:#f5f7fb;--surface:#ffffff;--ink:#0d1424;--muted:#52607a;--line:#dde3ef;
+  --c1:#0891b2;--c2:#6d4aff;--c3:#ea580c;--glow:.16;--onbtn:#ffffff;
+  --grad:linear-gradient(115deg,var(--c1),var(--c2) 60%,var(--c3));
+  color-scheme:light;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#070a12;--surface:#0f1626;--ink:#eaf0fb;--muted:#9aa8c2;--line:#1d2840;--c1:#35e0f0;--c2:#7b5cff;--c3:#ff7a59;--glow:.28;--onbtn:#070a12;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#070a12;--surface:#0f1626;--ink:#eaf0fb;--muted:#9aa8c2;--line:#1d2840;--c1:#35e0f0;--c2:#7b5cff;--c3:#ff7a59;--glow:.28;--onbtn:#070a12;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;margin:0;line-height:1.08;letter-spacing:-.015em}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glow{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.glow i{position:absolute;border-radius:50%;filter:blur(90px);opacity:var(--glow)}
+.glow i:nth-child(1){width:460px;height:460px;background:var(--c1);top:-120px;left:-100px}
+.glow i:nth-child(2){width:420px;height:420px;background:var(--c2);top:30%;right:-140px}
+.glow i:nth-child(3){width:380px;height:380px;background:var(--c3);bottom:-140px;left:30%}
+.bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:60}
+main,footer,nav{position:relative;z-index:1}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Space Grotesk",system-ui,sans-serif;font-weight:700;font-size:18px}
+.mark{width:36px;height:36px;border-radius:10px;background:var(--grad);color:var(--onbtn);display:grid;place-items:center;font-size:15px}
+.links{display:flex;align-items:center;gap:26px;font-size:15px}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid var(--line);color:var(--ink);background:transparent;transition:transform .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--c2)}
+.btn.p{background:var(--grad);color:var(--onbtn);border-color:transparent}
+.btn.sm{padding:9px 18px;font-size:14px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding:72px 0 56px;min-height:calc(100vh - 66px)}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 15px;font-size:14px;color:var(--muted)}
+.pill b{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+.hero h1{font-size:clamp(44px,7vw,78px);margin:22px 0 14px}
+.role{font-family:"Space Grotesk",system-ui,sans-serif;font-size:clamp(20px,2.6vw,26px);font-weight:600;min-height:1.4em}
+.role span{color:var(--muted)}
+.role em{font-style:normal;display:inline-block;transition:opacity .35s,transform .35s}
+.role em.out{opacity:0;transform:translateY(8px)}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:46ch;margin:18px 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.visual{position:relative;display:grid;place-items:center;min-height:380px}
+.orb{width:min(320px,70vw);aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,var(--c1),var(--c2),var(--c3),var(--c1));animation:spin 14s linear infinite}
+.orb div{width:100%;height:100%;border-radius:50%;background:var(--surface);display:grid;place-items:center;animation:spin 14s linear infinite reverse}
+.orb strong{font-family:"Space Grotesk",system-ui,sans-serif;font-size:clamp(64px,10vw,96px);font-weight:700}
+.fc{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;display:flex;flex-direction:column;box-shadow:0 14px 40px rgba(0,0,0,.18);animation:bob 5s ease-in-out infinite}
+.fc b{font-family:"Space Grotesk",system-ui,sans-serif;font-size:22px;line-height:1.1}
+.fc small{color:var(--muted);font-size:13px}
+.fc.a{top:6%;left:0}.fc.b{bottom:8%;right:0;animation-delay:-2.4s}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border:1px solid var(--line);border-radius:18px;margin-bottom:8px}
+.stats div{padding:28px 24px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:"Space Grotesk",system-ui,sans-serif;font-size:clamp(34px,4.5vw,46px);line-height:1}
+.stats span{color:var(--muted);font-size:15px}
+section{padding:96px 0 0}
+.head{max-width:620px;margin-bottom:38px}
+h2{font-size:clamp(30px,4.6vw,46px);margin-bottom:12px}
+.head p{margin:0;color:var(--muted);font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:var(--c2)}
+.ico{width:44px;height:44px;border-radius:12px;background:var(--grad);color:var(--onbtn);display:grid;place-items:center;margin-bottom:18px}
+.ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.work{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}
+.wc{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.shot{min-height:230px;padding:22px;background:linear-gradient(135deg,color-mix(in srgb,var(--c2) 24%,var(--surface)),color-mix(in srgb,var(--c1) 18%,var(--surface)));display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+.shot .dots{display:flex;gap:6px;margin-bottom:auto}.shot .dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.shot b{font-family:"Space Grotesk",system-ui,sans-serif;font-size:28px}
+.shot small{color:var(--muted)}
+.wb{padding:24px;display:flex;flex-direction:column;gap:14px;flex:1}
+.wb h3{font-size:23px}.wb p{margin:0;color:var(--muted)}
+.wb .btn{align-self:flex-start;margin-top:auto}
+.bars{padding:26px;display:flex;flex-direction:column;gap:16px;min-height:230px;justify-content:center}
+.row{display:grid;grid-template-columns:62px 1fr 48px;gap:12px;align-items:center;font-size:14px;color:var(--muted)}
+.trk{height:12px;border-radius:99px;background:var(--line);overflow:hidden}
+.trk i{display:block;height:100%;border-radius:99px;width:0;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.row:nth-child(1) i{background:var(--c3)}.row:nth-child(2) i{background:var(--c1)}
+.row b{color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif;font-size:17px}
+.err{font-family:"Space Grotesk",system-ui,sans-serif;font-size:15px;color:var(--muted)}
+.err b{color:var(--ink);font-size:20px}
+.mq{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:96px;padding:18px 0}
+.mq div{display:flex;gap:44px;width:max-content;animation:mq 32s linear infinite;font-family:"Space Grotesk",system-ui,sans-serif;font-size:24px;font-weight:600;color:var(--muted)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tl{list-style:none;margin:0;padding:0 0 0 28px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 32px 8px}
+.tl li::before{content:"";position:absolute;left:-37px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--c2)}
+.tl h3{font-size:21px}.tl .w{color:var(--muted);font-size:15px;margin:3px 0 7px}.tl p{margin:0;max-width:70ch}
+.cta{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(32px,6vw,68px);text-align:center;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:-40% 20% auto;height:80%;background:var(--grad);opacity:.14;filter:blur(70px)}
+.cta>*{position:relative}
+.cta h2{max-width:20ch;margin:0 auto 14px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 28px}
+.cta .btns{justify-content:center}
+footer{margin-top:96px;border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about p{color:var(--muted);font-size:18px;margin:0 0 16px}
+.pts{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.pts li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.pts li::before{content:"";flex:none;width:10px;height:10px;margin-top:9px;border-radius:50%;background:var(--grad)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sk{display:grid;gap:30px}.sk h3{font-size:19px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:8px 16px;font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card .yr{color:var(--muted);font-size:15px;margin-bottom:6px}
+.faq details{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:0 22px;margin-bottom:12px}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:19px;display:flex;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--c1);font-size:26px;line-height:1}
+.faq details[open] summary::after{content:"-"}
+.faq p{margin:0 0 20px;color:var(--muted)}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:28px}.steps{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+.case{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,5vw,52px)}
+.cring{position:relative;width:220px;height:220px;margin:0 auto}
+.cring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.cring circle{fill:none;stroke-width:14;stroke-linecap:round}
+.cring .t{stroke:var(--line)}
+.cring .v{stroke:var(--c1);stroke-dasharray:439.8;stroke-dashoffset:123.1;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1)}
+.rv.in .cring .v{stroke-dashoffset:35.2}
+.cring .n{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"Space Grotesk",system-ui,sans-serif;font-size:54px;font-weight:700;line-height:1}
+.cring .n small{font-family:"Inter",system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--muted);margin-top:6px}
+.case h3{font-size:clamp(24px,3.4vw,32px);margin-bottom:10px}
+.case p{color:var(--muted);margin:0 0 14px}
+.mets{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.mets div{border:1px solid var(--line);border-radius:14px;padding:16px}
+.mets b{display:block;font-family:"Space Grotesk",system-ui,sans-serif;font-size:26px;line-height:1.1;margin-bottom:4px}
+.mets span{color:var(--muted);font-size:14px}
+@media (max-width:900px){.case{grid-template-columns:1fr;gap:28px}.mets{grid-template-columns:1fr}}
+.card .more{display:inline-block;margin-top:16px;color:var(--c1);font-weight:600;font-size:15px;text-decoration:none}
+.card .more:hover{text-decoration:underline}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:900px){
+  .links a:not(.btn){display:none}
+  .hero{grid-template-columns:1fr;padding-top:40px;min-height:0}
+  .visual{min-height:320px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .grid{grid-template-columns:1fr 1fr}.work{grid-template-columns:1fr}
+}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}html{scroll-behavior:auto}
+}
+
+.ft{margin-top:96px;border-top:1px solid var(--line);padding:56px 0 26px}
+.ft .wrap{display:block}
+.fg{display:grid;grid-template-columns:1.3fr .8fr .9fr 1.7fr;gap:36px}
+.fg h4{font-family:"Space Grotesk",system-ui,sans-serif;font-size:16px;margin:0 0 18px;color:var(--ink)}
+.fg a{display:block;color:var(--muted);text-decoration:none;margin-bottom:12px;font-size:15px}
+.fg a:hover{color:var(--ink)}
+.fg p{color:var(--muted);font-size:15px;margin:16px 0 20px;max-width:34ch}
+.fg .brand{display:flex;margin:0;color:var(--ink)}
+.soc{display:flex;gap:10px}
+.fg .soc a{margin:0;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;color:var(--muted)}
+.fg .soc a:hover{color:var(--c1);border-color:var(--c1)}
+.soc svg,.mi svg{width:18px;height:18px}
+.fg .mi{display:flex;align-items:center;gap:10px;font-size:14.5px;overflow-wrap:anywhere}
+.mi svg{flex:none;fill:none;stroke:var(--c1);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fb{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fg{grid-template-columns:1fr}}
+
+.fg a.adm{display:inline-flex;align-items:center;gap:8px;margin:8px 0 0;padding:9px 16px;border:1px solid var(--line);border-radius:99px;color:var(--ink);background:var(--surface);font-size:14px}
+.fg a.adm:hover{border-color:var(--c1)}
+.adm svg{width:16px;height:16px;flex:none;fill:none;stroke:var(--c1);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="glow" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top"><span class="mark">MA</span>MD Asaduzzaman</a>
+  <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a class="btn p sm" href="#contact">Hire me</a></div>
+</div></nav>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <span class="pill"><b></b>Open to new projects</span>
+      <h1 class="grad">MD Asaduzzaman</h1>
+      <div class="role"><span>I’m a </span><em id="role">Web Designer</em></div>
+      <p class="lead">I build fast, responsive WordPress and Shopify websites with SEO built in, so your business looks professional and gets found on Google.</p>
+      <div class="btns"><a class="btn p" href="#work">View my work</a><a class="btn" href="#contact">Let’s talk</a></div>
+    </div>
+    <div class="visual">
+      <div class="orb"><div><strong class="grad">MA</strong></div></div>
+      <div class="fc a"><b>300+</b><small>Projects delivered</small></div>
+      <div class="fc b"><b>72% to 92%</b><small>Semrush Site Health</small></div>
+    </div>
+  </div>
+
+  <div class="stats rv">
+    <div><b class="grad" data-n="7">0</b><span>Years of experience</span></div>
+    <div><b class="grad" data-n="300">0</b><span>Projects delivered</span></div>
+    <div><b class="grad" data-n="200">0</b><span>WordPress websites</span></div>
+    <div><b class="grad" data-n="100">0</b><span>Shopify stores</span></div>
+  </div>
+
+  <section id="about">
+    <div class="about">
+      <div class="rv">
+        <h2>About <span class="grad">me</span></h2>
+        <p>I’m MD Asaduzzaman, a web designer and SEO specialist from Nawabganj, Rajshahi, Bangladesh. Over 7+ years I’ve delivered 300+ projects for businesses, brands, and individuals, including 200+ WordPress websites and 100+ Shopify stores.</p>
+        <p>A great website does more than look good. It communicates your brand clearly, works smoothly on every device, ranks on search engines, and supports your business goals.</p>
+        <p>My approach combines clean design, modern web standards, user-focused thinking, and practical SEO, with no unnecessary complexity.</p>
+      </div>
+      <ul class="pts">
+        <li class="rv">7+ years in web design and SEO</li>
+        <li class="rv">200+ WordPress websites and 100+ Shopify stores</li>
+        <li class="rv">Raised a client site’s Semrush Site Health from 72% to 92% and fixed all 416 errors</li>
+        <li class="rv">Worked with clients and teams in the UK and US</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="head rv"><h2>Services built to get you <span class="grad">customers</span></h2><p>Design, development, and SEO from one person, so your site looks right and ranks well.</p></div>
+    <div class="grid">
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div><h3>WordPress design</h3><p>Responsive business sites built with Elementor and Divi, ready for you to manage.</p><a class="more" href="https://docs.google.com/document/d/1WEAFTdBzNyx6hB84Wpl6UjCy3rDSbiK3z0sOItUGL6g/edit?usp=sharing" target="_blank" rel="noopener">View portfolio</a></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 7h14l-1.3 12.2a2 2 0 0 1-2 1.8H8.3a2 2 0 0 1-2-1.8L5 7z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg></div><h3>Shopify stores</h3><p>Store design, product pages, and shopping flows that make it easy to buy.</p><a class="more" href="https://docs.google.com/document/d/1PC1N_BVgAsq9Io3Zqf4hs4vB66W_6X23pXrcbuBvjfY/edit?usp=sharing" target="_blank" rel="noopener">View portfolio</a></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 11.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6"/></svg></div><h3>E-commerce websites</h3><p>Online stores with clear categories, fast pages, and a smooth checkout.</p><a class="more" href="https://docs.google.com/document/d/1NR0tJ7WDaglxIQ32XMco0vbFU2kgzBrDkCYgggXIrTc/edit?usp=sharing" target="_blank" rel="noopener">View portfolio</a></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Landing pages and UI/UX</h3><p>Focused layouts that guide visitors toward one action.</p><a class="more" href="https://docs.google.com/document/d/1fN4JYvT0XCPUE1u2_bt_tzpbU3R3ntXZ3PafntbJn0o/edit?usp=sharing" target="_blank" rel="noopener">View portfolio</a></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3>SEO</h3><p>On-page, technical, and e-commerce SEO, plus keyword research.</p><a class="more" href="https://docs.google.com/document/d/1-S7U5sSWxn7FQ4Ee5OmBDXw7gbBTIloPbFdlV-1X3qE/edit?usp=sharing" target="_blank" rel="noopener">View portfolio</a></article>
+      <article class="card rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 4 7-9"/></svg></div><h3>Redesign and speed</h3><p>Outdated sites rebuilt to be modern, mobile-friendly, and quick to load.</p><a class="more" href="https://docs.google.com/document/d/1XtalYTB6JOrqiABbAa-S_BR-V46df_STsl-FKCVSmik/edit?usp=sharing" target="_blank" rel="noopener">View portfolio</a></article>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="head rv"><h2>Selected <span class="grad">work</span></h2><p>A live store and a measurable SEO result.</p></div>
+    <div class="work">
+      <article class="wc rv">
+        <div class="shot"><div class="dots"><i></i><i></i><i></i></div><b>Liomi Fashion</b><small>liomifashion.shop</small></div>
+        <div class="wb"><h3>WordPress and WooCommerce fashion store</h3><p>An online store for a fashion brand, with a product catalog, cart, and policy pages.</p><a class="btn p" href="https://liomifashion.shop/" target="_blank" rel="noopener">Visit the live site</a></div>
+      </article>
+      <article class="wc rv">
+        <div class="bars" id="bars">
+          <div class="row"><span>Before</span><div class="trk"><i data-w="72"></i></div><b>72%</b></div>
+          <div class="row"><span>After</span><div class="trk"><i data-w="92"></i></div><b>92%</b></div>
+          <div class="err">Errors fixed: <b>416 to 0</b></div>
+        </div>
+        <div class="wb"><h3>Semrush Site Health, 72% to 92%</h3><p>A client site audit where all 416 errors were resolved.</p><a class="btn" href="#case">Read the case study</a></div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="case">
+    <div class="case rv">
+      <div class="cring"><svg viewBox="0 0 160 160" aria-hidden="true"><circle class="t" cx="80" cy="80" r="70"/><circle class="v" cx="80" cy="80" r="70"/></svg><div class="n">92%<small>Site Health</small></div></div>
+      <div>
+        <h3>Case study: Semrush Site Health, <span class="grad">72% to 92%</span></h3>
+        <p>A client website audited in Semrush scored 72% for Site Health and reported 416 errors. After every error was fixed, the score rose to 92% and the error count dropped to zero.</p>
+        <div class="mets">
+          <div><b class="grad">+20 points</b><span>Site Health improvement</span></div>
+          <div><b class="grad">416 to 0</b><span>Errors reported by the audit</span></div>
+          <div><b class="grad">Semrush</b><span>Site Audit, April 2024</span></div>
+        </div>
+        <p>Clearing site errors helps search engines crawl and understand a website, and gives visitors a smoother, faster experience. I check for this on every site I build and redesign.</p>
+        <a class="btn p" href="mailto:mdasaduzzaman86684@gmail.com">Ask for a site health check</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="mq" aria-hidden="true"><div>
+  <span>WordPress</span><span>Shopify</span><span>Elementor</span><span>Divi</span><span>Semrush</span><span>On-page SEO</span><span>Technical SEO</span><span>Google Ads</span><span>YouTube SEO</span>
+  <span>WordPress</span><span>Shopify</span><span>Elementor</span><span>Divi</span><span>Semrush</span><span>On-page SEO</span><span>Technical SEO</span><span>Google Ads</span><span>YouTube SEO</span>
+</div></div>
+
+<div class="wrap">
+  <section id="process">
+    <div class="head rv"><h2>How a project <span class="grad">works</span></h2><p>A simple path from your idea to a live, optimized website.</p></div>
+    <div class="steps">
+      <article class="card rv"><h3>Understand your goals</h3><p>We talk about your business, your customers, and what the website needs to achieve.</p></article>
+      <article class="card rv"><h3>Design the layout</h3><p>Clean, modern pages with a clear structure that is easy to use on any screen.</p></article>
+      <article class="card rv"><h3>Build and optimize</h3><p>Development in WordPress or Shopify, with on-page SEO and speed work built in.</p></article>
+      <article class="card rv"><h3>Launch and improve</h3><p>Final checks before going live, then fixes and improvements as your site grows.</p></article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="head rv"><h2>Skills and <span class="grad">tools</span></h2><p>What I use every day to design, build, and optimize websites.</p></div>
+    <div class="sk rv">
+      <div><h3>Web</h3><div class="chips"><span>WordPress</span><span>Shopify</span><span>Elementor</span><span>Divi</span><span>E-commerce design</span><span>Responsive design</span><span>Landing pages</span><span>UI/UX design</span><span>Website redesign</span></div></div>
+      <div><h3>SEO</h3><div class="chips"><span>On-page SEO</span><span>Technical SEO</span><span>E-commerce SEO</span><span>Keyword research</span><span>Semrush</span></div></div>
+      <div><h3>Marketing</h3><div class="chips"><span>Google Ads</span><span>YouTube SEO</span></div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="head rv"><h2>Experience</h2><p>Seven years across web design and SEO, with clients in the UK and US.</p></div>
+    <ul class="tl">
+      <li class="rv"><h3>Web Designer, AK Technology</h3><div class="w">Apr 2026 to present, part-time</div><p>WordPress and Shopify websites, landing pages, and on-page SEO for client businesses.</p></li>
+      <li class="rv"><h3>Senior Web Designer, Prosper-IT</h3><div class="w">Mar 2025 to present, part-time</div><p>Responsive websites and e-commerce stores with WordPress, Elementor, and Divi.</p></li>
+      <li class="rv"><h3>Senior Web Designer, Sovereign BI, Data, Analytics Ltd. (UK)</h3><div class="w">Mar 2024 to Dec 2024</div><p>WordPress and Shopify sites for clients, including the Semrush Site Health fix shown above.</p></li>
+      <li class="rv"><h3>SEO Specialist, Creative (Agency), US</h3><div class="w">Jan 2023 to Dec 2023</div><p>Website and SEO projects for international clients. Google Ads, YouTube SEO, and influencer campaigns delivered over 40% ROI growth.</p></li>
+      <li class="rv"><h3>Senior SEO Specialist, TechGrow Solutions (Remote, USA)</h3><div class="w">Feb 2019 to Dec 2021, part-time</div><p>Keyword research and on-page, technical, and e-commerce SEO, plus WordPress websites and landing pages.</p></li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <div class="head rv"><h2>Education</h2></div>
+    <div class="two">
+      <article class="card rv"><div class="yr">2020 to 2024</div><h3>Bachelor of Arts in English</h3><p>University of Rajshahi</p></article>
+      <article class="card rv"><div class="yr">2017 to 2019</div><h3>Higher Secondary Certificate, Science</h3><p>Nawabgonj Government College</p></article>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="head rv"><h2>Common <span class="grad">questions</span></h2></div>
+    <div class="faq rv">
+      <details><summary>Which platforms do you work with?</summary><p>WordPress, using Elementor and Divi, and Shopify. I also build e-commerce stores and landing pages.</p></details>
+      <details><summary>Will my website be SEO-friendly?</summary><p>Yes. I build on-page and technical SEO into every site from the start, including site speed and a clean structure.</p></details>
+      <details><summary>Can you redesign my existing website?</summary><p>Yes. I redesign outdated sites into modern, mobile-friendly websites that are easier to use and quicker to load.</p></details>
+      <details><summary>Do you work with international clients?</summary><p>Yes. I have worked with clients and teams in the UK and US and I’m comfortable with remote work.</p></details>
+      <details><summary>How do I start a project?</summary><p>Email me or message me on LinkedIn with your website or project details, and I’ll reply with next steps.</p></details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="cta rv">
+      <h2>Ready for a website that <span class="grad">ranks and converts?</span></h2>
+      <p>Tell me about your business and your goals, and I’ll reply with how I’d approach your website.</p>
+      <div class="btns"><a class="btn p" href="mailto:mdasaduzzaman86684@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/asad301" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="tel:+8801336205932">+880 1336205932</a></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="ft"><div class="wrap">
+<div class="fg">
+  <div>
+    <a class="brand" href="#top"><span class="mark">MA</span>MD Asaduzzaman</a>
+    <p>Web designer and SEO specialist building fast, responsive WordPress and Shopify websites that get found on Google.</p>
+    <div class="soc">
+      <a href="https://www.linkedin.com/in/asad301" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.75 9.75h3.8v1.6h.06c.53-1 1.84-2.06 3.78-2.06 4.04 0 4.8 2.66 4.8 6.1V21h-4v-4.7c0-1.12-.02-2.56-1.56-2.56-1.56 0-1.8 1.22-1.8 2.48V21h-4z"/></svg></a>
+      <a href="mailto:mdasaduzzaman86684@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <a href="#top">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </div>
+  <div>
+    <h4>Services</h4>
+    <a href="#services">WordPress Design</a><a href="#services">Shopify Stores</a><a href="#services">E-commerce Websites</a><a href="#services">SEO</a>
+  </div>
+  <div>
+    <h4>Get in Touch</h4>
+    <a class="mi" href="mailto:mdasaduzzaman86684@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>mdasaduzzaman86684@gmail.com</a>
+    <a class="mi" href="tel:+8801336205932"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>+880 1336205932</a>
+    <a class="mi" href="#contact"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Nawabganj, Rajshahi, Bangladesh</a>
+    <a class="adm" href="https://github.com/mdasaduzzaman86684-stack/asad301" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3z"/><path d="M9.5 12l2 2 3.5-4"/></svg>Admin Panel</a>
+  </div>
+</div>
+<div class="fb">&copy; 2026 MD Asaduzzaman. All rights reserved.</div>
+</div></footer>
+
+<script>
+(function(){
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var roles=['Web Designer','WordPress Developer','Shopify Expert','SEO Specialist'],i=0,el=document.getElementById('role');
+  if(!rm){setInterval(function(){el.classList.add('out');setTimeout(function(){i=(i+1)%roles.length;el.textContent=roles[i];el.classList.remove('out')},350)},2400)}
+  var bar=document.getElementById('bar');
+  addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+  function count(n){var t=+n.dataset.n,s=null;if(rm){n.textContent=t+'+';return}
+    function f(ts){if(s===null)s=ts;var p=Math.min((ts-s)/1400,1);n.textContent=Math.round(t*(1-Math.pow(1-p,3)))+'+';if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+  function bars(){document.querySelectorAll('#bars i').forEach(function(b){b.style.width=b.dataset.w+'%'})}
+  var done={};
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
+    e.target.querySelectorAll('[data-n]').forEach(count);
+    if(e.target.querySelector('#bars'))bars();
+  })},{threshold:.15});
+  document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(function(n){n.classList.add('in')});document.querySelectorAll('[data-n]').forEach(count);bars()}
+})();
+</script>
+</body>
+</html>
